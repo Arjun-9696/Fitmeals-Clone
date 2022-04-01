@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Checkout - Fitmeals</title>
+    <link rel="icon" type="image/icon" href="https://foodiefitmeals.com/wp-content/uploads/2019/04/cropped-favicon.png">
+    <link rel="stylesheet" href="./css/checkout_fitmeals.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran&family=Fira+Sans:wght@700&family=Sacramento&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cb4c3d70f3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/footer.css">
+    <style>
+        p{
+            margin-top:16px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar start -->
+ <div class="nav-top">
+        <div class="left">
+            <i class="fas fa-map-marker-alt yg"></i>
+            <p>Food delivery only in Hyderabad</p> 
+            <i class="fas fa-phone-alt yg"></i>
+            <p>9100347480</p>
+            <i class="far fa-envelope yg"></i>
+            <p>fitmealsindia@gmail.com</p>
+        </div>
+        <div class="right">
+            <i class="fas fa-search focus"></i>
+            <i class="far fa-user focus" onclick="window.location.href='login_fitmeals.html'"></i>
+            <i class="fas fa-shopping-bag focus" onclick="window.location.href='cart.html'"></i>
+        </div>
+    </div>
+    <div class="nav-main">
+        <div class="nav-left">
+            <img src="https://www.fitmeals.co.in/wp-content/uploads/2019/06/logo-black.png" alt="logo">
+        </div>
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-mid" id="nav-mid">
+            <a href="index.html" id="home"><p>Home</p></a>
+            <div class="dropdown">
+                <button class="dropbtn">Meal plans ></button>
+                <div class="dropdown-content">
+                  <a href="#">Weight Loss Meal Plan</a>
+                  <a href="#">Maintenance Meal Plan</a>
+                  <a href="#">Athletic Meal Plan</a>
+                  <a href="#">Keto Meal Plan</a>
+                  <a href="#">Transformation Challenges</a>
+                </div>
+            </div>
+            <a href="" id="home"><p>Health coaching</p></a>
+            <div class="dropdown">
+                <button class="dropbtn">Products ></button>
+                <div class="dropdown-content">
+                  <a href="prod_01.html">Vegan Sweets</a>
+                  <a href="lowcal.html">Low-Cal Sauces</a>
+                  <a href="#">Nut Butters</a>
+                  <a href="#">Fresh Bakes</a>
+                </div>
+            </div>
+            <a href="" id="home"><p>Blog</p></a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="window.location.href='aboutUs.html'">About Us ></button>
+                <div class="dropdown-content">
+                  <a href="#">Our story</a>
+                  <a href="#">FAQ</a>
+                  <a href="#">Testimonials</a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-right">
+            <p>Call: 8553535302</p>
+        </div>
+    </div>
+    <!-- Navbar end -->
+
+    <div id="title_div"><h1 id="title">Checkout</h1></div>
+
+    <div id="main_page">
+        <div class="top">Returning customer? <span><a id="black" href="login_fitmeals.html">Click here to login</a></span></div>
+
+        <div class="top">Have a coupon? <span><a id="black" href="login_fitmeals.html">Click here to enter your code</a></span></div>
+    <h1>Billing details</h1>
+      <div id="container">
+          <form id="form1">
+            <h4>First Name<span>*</span></h4>
+            <input type="text" required/>
+            <h4>Last Name<span>*</span></h4>
+            <input type="text" required/>
+            <h4>Company Name (optional)</h4>
+            <input id="company_name" type="text" required/>
+            <h4>Country / Region<span>*</span></h4>
+            <h4 id="country">India</h4>
+            <h4>Street Adress<span>*</span></h4>
+            <input id="street" type="text" placeholder="House number and street name" required/>
+            <input type="text" placeholder="Apartment, suite, unit, etc. (optional)" required/>
+            <h4>Town / City<span>*</span></h4>
+            <input id="city" type="text" required/>
+            <h4>State<span>*</span></h4>
+            <select id="state" required>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Andaman">Andaman and Nicobar Islands</option>
+                <option value="Andhra">Andhra Pradesh</option>
+                <option value="Arunachal">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Chattisgarh">Chhattisgarh</option>
+                <option value="Dadra">Dadra and Nagar Haveli</option>
+                <option value="Daman">Daman and Diu</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal">Himachal Pradesh</option>
+                <option value="Jammu">Jammu and Kashmir</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Ladakh">Ladakh</option>
+                <option value="Lakshadweep">Lakshadweep</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Puducherry">Puducherry</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+            </select>
+            <h4>PIN<span>*</span></h4>
+            <input id="pin" type="number" required/>
+            <h4>Phone<span>*</span></h4>
+            <input id="phone" type="number" required/>
+            <h4>Email adress<span>*</span></h4>
+            <input id="pass" type="text" required/>
+          </form>
+          <div id="right">
+            <div id="shipto" class="checkit">
+                    <input type="checkbox" class="check" name="check">
+                    <label class = "lab" for="check"><h4>Ship to different adress</h4></label>
+                </div>
+                <div id="create_acc" class="checkit">
+                    <input type="checkbox" class="check" name="check">
+                    <label class="lab" for="check"><h4>Create an account?</h4></label>
+                </div>
+                <h4 id="order_note">Order notes (optional)</h4>
+                <textarea id="tarea" placeholder="Notes about your order, e.g. special notes for delivery"></textarea>
+            </div>
+        </div>
+        <h1>Your Order</h1>
+        <div id="table">
+            <table class="table1">
+                <thead>
+                    <tr class="head">
+                        <th>Product</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            <table class="table2">
+                <tr>
+                    <td class="total">Subtotal</td>
+                    <td class="price" id="subtotal">₹0</td>
+                </tr>
+                <tr>
+                    <td class="total">Discount<span>(30% off)</span></td>
+                    <td class="price" id="discount">₹0</td>
+                </tr>
+                <tr>
+                    <td class="total">Shipping</td>
+                    <td class="price" id="shipping">₹0</td>
+                </tr>
+                <tr>
+                    <td class="total">Total</td>
+                    <td class="price" id="total">₹0</td>
+                </tr>
+            </table>
+        </div>
+        <div id="pay">
+            <div class="payoption">
+                <input  type="radio" class="click" name="payments" value="cod">
+                <h4 style="margin-top: 10px;">Cash on Delivery: Pay on the first day of your meals.</h4>
+            </div>
+            <div class="payoption">
+                <input type="radio" class="click" name="payments" value="payumoney">
+                <h4 style="margin-top: 0;">PayUmoney <span><img src="https://www.fitmeals.co.in/wp-content/plugins/PUM_WooCommerce_v3.4-master/images/payumoney.png" style="height: 25px"></span></h4>
+            </div>
+        </div>
+        <div id="terms" class="payoption">
+            <input  type="checkbox" class="click" style="width: 15px;" required>
+            <h4 style="margin-top: 10px;">I have read and agree to the website terms and conditions <span>*</span></h4>
+        </div>
+        <input id="sbmt" type="submit" value="Place Order">
+    </div>
+ <footer>
+        <div id="footer_body">
+          <div id="footer_box">
+              <div class="social">
+                  <img class="footer_img" onclick="window.location.href='card.html'"
+                      src="https://www.fitmeals.co.in/wp-content/uploads/2019/06/logo-white.png">
+                  <p>The Fitmeals culinary team consists of very<br> passionate and skilled chefs.<br> Our team is well
+                      versed in nutrition and all our menus and plans are designed by qualified nutrition experts.</p>
+                  <div class="footer_icon">
+                      <ion-icon name="logo-facebook"></ion-icon>
+                      <ion-icon name="logo-twitter"></ion-icon>
+                      <ion-icon name="logo-instagram"></ion-icon>
+                  </div>
+              </div>
+              <div class="explore">
+                  <h4>Explore</h4>
+                  <h5>
+                      <ion-icon name="chevron-forward-outline"></ion-icon><a href="#">Home</a>
+                  </h5>
+  
+              </div>
+              <div class="links">
+                  <h4>Links</h4>
+                  <h5>
+                      <ion-icon name="chevron-forward-outline"></ion-icon><a href="aboutUs.html">About Us</a>
+                  </h5>
+                  <h5>
+                      <ion-icon name="chevron-forward-outline"></ion-icon><a href="#">Blog</a>
+                  </h5>
+  
+              </div>
+              <div class="contact">
+                  <h5>Contact Us:</h5>
+                  <h5>
+                      <ion-icon name="call-outline"></ion-icon> Call Us:<br>
+                      <h6>+91-8553535302</h6>
+                  </h5>
+                  <h4>
+                      <ion-icon name="mail-outline"></ion-icon> Email Us:<br>
+                      <h6>fitmealsindia@gmail.com</h6>
+                  </h4>
+                  <h5>
+                      <ion-icon name="location-outline"></ion-icon> Our Location:<br>
+                      <h6>Banjara Hills, Road no.5, Hyderabad</h6>
+                  </h5>
+              </div>
+  
+  
+          </div>
+        </div>
+          <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+          <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      </footer>
+</body>
+</html>
+<script src="./js/checkout_fitmeals.js"></script>
+<script src="./js/nav.js"></script>

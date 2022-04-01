@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Placed - Fitmeals</title>
+    <link
+      rel="icon"
+      type="image/icon"
+      href="https://foodiefitmeals.com/wp-content/uploads/2019/04/cropped-favicon.png"
+    />
+    <link rel="stylesheet" href="./css/checkout_fitmeals.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran&family=Fira+Sans:wght@700&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/cb4c3d70f3.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      .price {
+        font-weight: lighter;
+        color: rgb(92, 91, 91);
+      }
+      .details {
+        display: flex;
+        margin: 0 auto;
+        width: 35%;
+        justify-content: space-between;
+        padding: 0;
+      }
+
+         p{
+            margin-top:16px;
+        }
+
+      span {
+        color: #292d35;
+        font-weight: bold;
+      }
+      .details > h4 {
+        margin: 0;
+        width: 50%;
+      }
+      #return {
+        width: 40%;
+        height: 40px;
+        background-color: #292d35;
+        border: none;
+        border-radius: 50px;
+        color: white;
+        font-size: large;
+        margin: 30px 30%;
+      }
+      #return:hover {
+        background-color: #8ec038;
+      }
+      @media only screen and (min-width: 0px) and (max-width: 400px) {
+        .details {
+          width: 90%;
+          margin: 0 auto;
+          flex-direction: column;
+        }
+        .details > h4 {
+          text-align: center;
+          margin: 5px 0;
+          width: 100%;
+        }
+      }
+      @media only screen and (min-width: 401px) and (max-width: 950px) {
+        .details {
+          width: 60%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar start -->
+    <div class="nav-top">
+      <div class="left">
+        <i class="fas fa-map-marker-alt yg"></i>
+        <p>Food delivery only in Hyderabad</p>
+        <i class="fas fa-phone-alt yg"></i>
+        <p>9100347480</p>
+        <i class="far fa-envelope yg"></i>
+        <p>fitmealsindia@gmail.com</p>
+      </div>
+      <div class="right">
+        <i class="fas fa-search focus"></i>
+        <i
+          class="far fa-user focus"
+          onclick="window.location.href='login_fitmeals.html'"
+        ></i>
+        <i
+          class="fas fa-shopping-bag focus"
+          onclick="window.location.href='cart.html'"
+        ></i>
+      </div>
+    </div>
+    <div class="nav-main">
+      <div class="nav-left">
+        <img
+          src="https://www.fitmeals.co.in/wp-content/uploads/2019/06/logo-black.png"
+          alt="logo"
+        />
+      </div>
+      <button class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="nav-mid" id="nav-mid">
+        <a href="index.html" id="home"><p>Home</p></a>
+        <div class="dropdown">
+          <button class="dropbtn">Meal plans ></button>
+          <div class="dropdown-content">
+            <a href="#">Weight Loss Meal Plan</a>
+            <a href="#">Maintenance Meal Plan</a>
+            <a href="#">Athletic Meal Plan</a>
+            <a href="#">Keto Meal Plan</a>
+            <a href="#">Transformation Challenges</a>
+          </div>
+        </div>
+        <a href="" id="home"><p>Health coaching</p></a>
+        <div class="dropdown">
+          <button class="dropbtn">Products ></button>
+          <div class="dropdown-content">
+            <a href="prod_01.html">Vegan Sweets</a>
+            <a href="lowcal.html">Low-Cal Sauces</a>
+            <a href="#">Nut Butters</a>
+            <a href="#">Fresh Bakes</a>
+          </div>
+        </div>
+        <a href="" id="home"><p>Blog</p></a>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="window.location.href='aboutUs.html'">
+            About Us >
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Our story</a>
+            <a href="#">FAQ</a>
+            <a href="#">Testimonials</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-right">
+        <p>Call: 8553535302</p>
+      </div>
+    </div>
+    <!-- Navbar end -->
+
+    <div>
+      <div id="title_div"><h1 id="title">Checkout</h1></div>
+      <div id="main_page">
+        <h4 class="lines" style="text-align: center; color: #292d35">
+          Thank you. Your order has been received.
+        </h4>
+        <div class="details">
+          <h4 class="price">ORDER NUMBER : <span id="order"></span></h4>
+          <h4 class="price">DATE : <span id="date"></span></h4>
+        </div>
+      </div>
+      <h1>Order Details</h1>
+      <div id="table">
+        <table class="table1">
+          <thead>
+            <tr class="head">
+              <th>Product</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <table class="table2">
+          <tr>
+            <td class="total">Subtotal</td>
+            <td class="price" id="subtotal">₹0</td>
+          </tr>
+          <tr>
+            <td class="total">Discount<span>(30% off)</span></td>
+            <td class="price" id="discount">₹0</td>
+          </tr>
+          <tr>
+            <td class="total">Shipping</td>
+            <td class="price" id="shipping">₹0</td>
+          </tr>
+          <tr>
+            <td class="total">Payment Method</td>
+            <td class="price" id="shipping">
+              Cash on delivery: Pay on the first day of your meals.
+            </td>
+          </tr>
+          <tr>
+            <td class="total">Total</td>
+            <td class="price" id="total">₹0</td>
+          </tr>
+        </table>
+      </div>
+      <a href="index.html"><button id="return" onclick="emptyCart()">Return Home</button></a>
+
+      <footer>
+        <div id="footer_body">
+          <div id="footer_box">
+            <div class="social">
+              <img
+                class="footer_img"
+                onclick="window.location.href='card.html'"
+                src="https://www.fitmeals.co.in/wp-content/uploads/2019/06/logo-white.png"
+              />
+              <p>
+                The Fitmeals culinary team consists of very<br />
+                passionate and skilled chefs.<br />
+                Our team is well versed in nutrition and all our menus and plans
+                are designed by qualified nutrition experts.
+              </p>
+              <div class="footer_icon">
+                <ion-icon name="logo-facebook"></ion-icon>
+                <ion-icon name="logo-twitter"></ion-icon>
+                <ion-icon name="logo-instagram"></ion-icon>
+              </div>
+            </div>
+            <div class="explore">
+              <h4>Explore</h4>
+              <h5>
+                <ion-icon name="chevron-forward-outline"></ion-icon
+                ><a href="#">Home</a>
+              </h5>
+            </div>
+            <div class="links">
+              <h4>Links</h4>
+              <h5>
+                <ion-icon name="chevron-forward-outline"></ion-icon
+                ><a href="aboutUs.html">About Us</a>
+              </h5>
+              <h5>
+                <ion-icon name="chevron-forward-outline"></ion-icon
+                ><a href="#">Blog</a>
+              </h5>
+            </div>
+            <div class="contact">
+              <h5>Contact Us:</h5>
+              <h5>
+                <ion-icon name="call-outline"></ion-icon> Call Us:<br />
+                <h6>+91-8553535302</h6>
+              </h5>
+              <h4>
+                <ion-icon name="mail-outline"></ion-icon> Email Us:<br />
+                <h6>fitmealsindia@gmail.com</h6>
+              </h4>
+              <h5>
+                <ion-icon name="location-outline"></ion-icon> Our Location:<br />
+                <h6>Banjara Hills, Road no.5, Hyderabad</h6>
+              </h5>
+            </div>
+          </div>
+        </div>
+        <script
+          type="module"
+          src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+          nomodule
+          src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        ></script>
+      </footer>
+    </div>
+  </body>
+</html>
+<script src="./js/checkout_fitmeals.js"></script>
+<script src="./js/nav.js"></script>
+<script>
+var today = new Date();
+var year = today.getFullYear();
+var mes = today.getMonth()+1;
+var day = today.getDate();
+var fecha =day+"-"+mes+"-"+year;
+  let dateAppent = document.getElementById('date');
+  dateAppent.innerHTML = `${fecha}  :-`;
+</script>
+<script>
+  let x = Math.floor(Math.random() * 1000 + 1);
+  let numberAppent = document.getElementById('order');
+  numberAppent.innerText = x;
+  dateAppent.append(x);
+</script>

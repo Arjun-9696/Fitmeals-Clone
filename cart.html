@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran&family=Fira+Sans:wght@700&family=Sacramento&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cb4c3d70f3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="icon" type="image/icon" href="https://foodiefitmeals.com/wp-content/uploads/2019/04/cropped-favicon.png">
+    <link rel="stylesheet" href="./css/footer.css">
+    <style>
+        * {
+            font-family:'Open Sans', sans-serif;
+        }
+        #container{
+            display: grid;
+            grid-template-columns: repeat(3,400px);
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+        }
+        #product-img {
+            box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            transition: 0.2s ease-out;
+            width: 100%;
+        }
+        #product-img :hover{
+            transform: translateY(20px);
+        }
+        h2{
+            transition: 0.5s;
+        }
+        h2:hover{
+            color: forestgreen;
+            cursor: pointer;
+        }
+
+        #heading{
+            width:100%;
+            height:350px;
+           background-image: url(https://hdqwalls.com/wallpapers/raspberry-good-fruit-plant-4k-um.jpg);
+           background-size: cover;
+             background-attachment: fixed;
+
+  /* Center the background image */
+  background-position: center;
+
+  /* Set the background image to no repeat */
+  background-repeat: no-repeat;
+
+  /* Scale the background image to be as large as possible */
+  background-size: cover;
+        }
+        #heading>h1{
+            text-align: center;
+            color: white;
+            padding-top: 120px;
+            font-size: 50px;
+        }
+        @media only screen and (min-width:0px) and (max-width:830px){
+           #container{
+               
+                grid-template-columns: repeat(1,400px);
+                
+            }
+        } 
+        @media only screen and (min-width:830px) and (max-width:1270px){
+           #container{
+               
+                grid-template-columns: repeat(2,400px);
+                
+                
+            }
+        }
+        #btn{
+            padding: 20px 40px;
+            color: white;
+            margin-top: 20px;
+            border-radius: 50px;
+            font-size: 20px;
+            margin-left: 40px;
+            background-color: rgb(216, 56, 56);
+            border: none;
+            box-shadow:inset 0 0 0 #961084;
+            transition: ease-in 0.3s;
+            outline: none;
+
+        }
+        #btn:hover{
+            box-shadow: inset 200px 0 0 0 rgb(126, 206, 6) ;
+            color: black;
+            cursor: pointer;
+            color:#000;
+        }
+        @media only screen and (min-width:0px) and (max-width:320px){
+           body{
+               
+                display: grid;
+                
+            }
+        }
+        @media only screen and (min-width:321px) and (max-width:720px){
+           body{
+               
+                display: grid;
+                
+                
+            }
+        }
+       #promo{
+           border: none;
+           background-color: red;
+           padding:10px 40px;
+           border-radius: 5px;
+           color: white;
+       }
+       #promo:hover{
+           background-color: yellowgreen;
+           color: black;
+       }
+       #mytext{
+           background-color: lightgray;
+           color: red;
+           border: none;
+           padding:10px 40px;
+           border-radius: 5px;
+            margin: 5px;
+            margin-left: 40px;
+       }
+        
+       p,h2{
+            margin-left: 40px;
+       }
+
+
+    </style>
+</head>
+<body>
+    
+    <!-- Navbar start -->
+    <div class="nav-top">
+        <div class="left">
+            <i class="fas fa-map-marker-alt yg"></i>
+            <p>Food delivery only in Hyderabad</p> 
+            <i class="fas fa-phone-alt yg"></i>
+            <p>9100347480</p>
+            <i class="far fa-envelope yg"></i>
+            <p>fitmealsindia@gmail.com</p>
+        </div>
+        <div class="right">
+            <i class="fas fa-search focus"></i>
+            <i class="far fa-user focus" onclick="window.location.href='login_fitmeals.html'"></i>
+            <i class="fas fa-shopping-bag focus" onclick="window.location.href='cart.html'"></i>
+        </div>
+    </div>
+    <div class="nav-main">
+        <div class="nav-left">
+            <img src="https://www.fitmeals.co.in/wp-content/uploads/2019/06/logo-black.png" alt="logo">
+        </div>
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-mid" id="nav-mid">
+            <a href="index.html" id="home"><p>Home</p></a>
+            <div class="dropdown">
+                <button class="dropbtn">Meal plans ></button>
+                <div class="dropdown-content">
+                  <a href="#">Weight Loss Meal Plan</a>
+                  <a href="#">Maintenance Meal Plan</a>
+                  <a href="#">Athletic Meal Plan</a>
+                  <a href="#">Keto Meal Plan</a>
+                  <a href="#">Transformation Challenges</a>
+                </div>
+            </div>
+            <a href="" id="home"><p>Health coaching</p></a>
+            <div class="dropdown">
+                <button class="dropbtn">Products ></button>
+                <div class="dropdown-content">
+                  <a href="prod_01.html">Vegan Sweets</a>
+                  <a href="lowcal.html">Low-Cal Sauces</a>
+                  <a href="#">Nut Butters</a>
+                  <a href="#">Fresh Bakes</a>
+                </div>
+            </div>
+            <a href="" id="home"><p>Blog</p></a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="window.location.href='aboutUs.html'">About Us ></button>
+                <div class="dropdown-content">
+                  <a href="#">Our story</a>
+                  <a href="#">FAQ</a>
+                  <a href="#">Testimonials</a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-right">
+            <p>Call: 8553535302</p>
+        </div>
+    </div>
+    <!-- Navbar end -->
+
+    <div id="heading"><h1>Cart</h1></div>
+   <div > <button id="btn" onclick="window.location.href='checkout_fitmeals.html'">Check Out</button>
+    <p>Apply PROMO "FITMEALS30" or "MASAI30" get 30% Discount</p>
+    <input type="text" id="mytext"   placeholder="Apply PROMO">
+    <button id=promo onclick="submit()">Submit</button>
+</div>
+    <h2></h2>
+    <div
+    id="container">
+     
+</div>
+<br>
+<br>
+<footer>
+        <div id="footer_body">
+          <div id="footer_box">
+              <div class="social">
+                  <img class="footer_img" onclick="window.location.href='card.html'"
+                      src="https://www.fitmeals.co.in/wp-content/uploads/2019/06/logo-white.png">
+                  <p>The Fitmeals culinary team consists of very<br> passionate and skilled chefs.<br> Our team is well
+                      versed in nutrition and all our menus and plans are designed by qualified nutrition experts.</p>
+                  <div class="footer_icon">
+                      <ion-icon name="logo-facebook"></ion-icon>
+                      <ion-icon name="logo-twitter"></ion-icon>
+                      <ion-icon name="logo-instagram"></ion-icon>
+                  </div>
+              </div>
+              <div class="explore">
+                  <h4>Explore</h4>
+                  <h5>
+                      <ion-icon name="chevron-forward-outline"></ion-icon><a href="index.html">Home</a>
+                  </h5>
+  
+              </div>
+              <div class="links">
+                  <h4>Links</h4>
+                  <h5>
+                      <ion-icon name="chevron-forward-outline"></ion-icon><a href="aboutUs.html">About Us</a>
+                  </h5>
+                  <h6>
+                      <ion-icon name="chevron-forward-outline"></ion-icon><a href="#">Blog</a>
+                  </h6>
+  
+              </div>
+              <div class="contact">
+                  <h5>Contact Us:</h5>
+                  <h5>
+                      <ion-icon name="call-outline"></ion-icon> Call Us:<br>
+                      <h6>+91-8553535302</h6>
+                  </h5>
+                  <h4>
+                      <ion-icon name="mail-outline"></ion-icon> Email Us:<br>
+                      <h6>fitmealsindia@gmail.com</h6>
+                  </h4>
+                  <h5>
+                      <ion-icon name="location-outline"></ion-icon> Our Location:<br>
+                      <h6>Banjara Hills, Road no.5, Hyderabad</h6>
+                  </h5>
+              </div>
+  
+  
+          </div>
+        </div>
+          <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+          <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      </footer>
+
+</body>
+</html>
+<script>
+    var cartArr=JSON.parse(localStorage.getItem("CartItems"));
+
+     var promo=document.getElementById("mytext")
+     function submit(){
+         if(promo.value==="FITMEALS30" || promo.value==="MASAI30"){
+             var discount= Math.floor(total/3.3);
+             total=total-discount;
+            
+             document.querySelector("h2").textContent=`Total amount is ₹ ${Math.floor(total)}`
+         }
+         
+         else{
+             alert("Invalid Promo")
+         }
+     }
+
+     
+       
+     
+    
+    
+cartArr.map(function(food){
+        var div=document.createElement("div")
+        div.style.boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px";
+
+
+        var image=document.createElement("img")
+        image.setAttribute("src",food.image_url)
+        image.style.borderRadius="10px"
+        image.setAttribute("id","product-img")
+        
+       
+        
+        var div2=document.createElement("div")
+
+        
+
+        var Name=document.createElement("h2")
+        Name.textContent=food.name
+        Name.style.textAlign="center"
+        
+
+        var detail=document.createElement("p")
+        detail.textContent=food.details;
+        detail.style.textAlign="center"
+
+        var prices=document.createElement("h3")
+        prices.textContent="₹ "+food.price+".00"
+        prices.style.color="red";
+        prices.style.textAlign="center"
+
+        div2.append(Name,detail,prices);
+        div.append(image,div2)
+        document.querySelector("#container").append(div);
+    });
+    var total=cartArr.reduce(function(ac,cv){
+        return ac + Number(cv.price)
+    },0)
+  
+    document.querySelector("h2").textContent=`Total amount is ₹ ${total}`
+    
+  
+</script>
+<script src="nav.js"></script>
